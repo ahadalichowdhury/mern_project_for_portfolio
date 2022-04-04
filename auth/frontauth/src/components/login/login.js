@@ -21,7 +21,7 @@ const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post("http://localhost:5500/login", user)
+        axios.post("https://api-auth.ahadalichowdhury.com/login", user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)

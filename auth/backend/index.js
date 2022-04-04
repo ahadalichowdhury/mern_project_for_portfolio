@@ -8,7 +8,9 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-mongoose.connect('mongodb://localhost:27017/loginregisterdb',{
+const uri = "mongodb+srv://admin:admin@cluster0.bsyw4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+mongoose.connect(uri,{
     useNewUrlParser: true,
     useUnifiedTopology: true 
 

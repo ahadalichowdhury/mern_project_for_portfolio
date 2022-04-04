@@ -26,7 +26,7 @@ function Register() {
     const register= ()=>{
       const {name, email, password, re_password} = user
       if(name && email && password && (password === re_password)){
-          axios.post("http://localhost:5500/register", user)
+          axios.post("https://api-auth.ahadalichowdhury.com/register", user)
           .then(res=>{
             alert(res.data.message)
           })
